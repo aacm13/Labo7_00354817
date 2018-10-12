@@ -12,4 +12,23 @@ container.style.height = "200px";
 
 container.innerHTML = "<input type=\"text\" placeholder='escriba su texto'>"
 
-contaner = document.getElementsByClassName("c2");
+var contaners = document.getElementsByClassName("c2");
+Array.prototype.forEach.call(contaners, element =>{
+    element.style.backgroundColor = "#009999";
+});
+
+Array.prototype.forEach.call(contaners, element =>{
+    element.innerHTML = "<input type=\'text\' placeholder=\'Escriba su texto\'>"
+});
+
+var boton = document.getElementById("btn-click");
+boton.onclick = function(evt) 
+{ 
+alert("Hola mundo"); 
+}
+var btnCopy = document.getElementById("btnCopy");
+btnCopy.onclick = function(evt) 
+{ 
+let msj = document.getElementById('textMsj').value;
+document.getElementById('showMsj').innerText = msj;
+}
